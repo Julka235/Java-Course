@@ -6,7 +6,7 @@
 
     <groupId>org.futurecollars</groupId>
     <artifactId>JavaCourse</artifactId>
-    <version>1.0-TimeConversion</version>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>

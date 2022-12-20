@@ -6,17 +6,7 @@ import org.junit.jupiter.api.Test;
 class TimeConversionTest {
 
     @Test
-    void shouldReturn60() {
-        // given
-        int minutes = 1;
-        // when
-        int seconds = TimeConversion.convertMinutesToSeconds(minutes);
-        // then
-        Assertions.assertEquals(60, seconds);
-    }
-
-    @Test
-    void shouldReturn300() {
+    void shouldConvertMinutesToSeconds() {
         // given
         int minutes = 5;
         // when
