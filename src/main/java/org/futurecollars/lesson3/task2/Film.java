@@ -1,4 +1,4 @@
-package org.futurecollars.lesson3task2;
+package org.futurecollars.lesson3.task2;
 
 public class Film {
     private final String title;
