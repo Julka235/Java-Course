@@ -1,7 +1,6 @@
 package org.futurecollars.lesson3task2;
 
 public class Film {
-<<<<<<< HEAD
     private final String title;
     private final String director;
     private final int timeInMinutes;
