@@ -1,4 +1,4 @@
-package org.futurecollars.lesson3task4;
+package org.futurecollars.lesson3.task4;
 
 public class TimeConversion {
     final static int SECONDS_IN_A_MINUTE = 60;
