@@ -1,4 +1,4 @@
-package org.futurecollars.lesson3task1;
+package org.futurecollars.lesson3.task1;
 
 public class Seat {
     private final int seatNumber;
