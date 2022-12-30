@@ -1,4 +1,4 @@
-package org.futurecollars;
+package org.futurecollars.lesson4.notes;
 
 import java.util.Objects;
 
