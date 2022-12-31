@@ -12,8 +12,8 @@ class RectangleTest {
         // given
         double sideA = 4;
         double sideB = 2.5;
-        // when
         Rectangle rectangle = new Rectangle(sideA, sideB);
+        // when
         double area = rectangle.getArea();
         // then
         Assertions.assertEquals(10, area);
@@ -24,8 +24,8 @@ class RectangleTest {
         // given
         double sideA = 4;
         double sideB = 2.5;
-        // when
         Rectangle rectangle = new Rectangle(sideA, sideB);
+        // when
         double perimeter = rectangle.getPerimeter();
         // then
         Assertions.assertEquals(13, perimeter);

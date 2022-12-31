@@ -14,8 +14,8 @@ class TriangleTest {
         double height = 4;
         double sideA = 3;
         double sideC = 5;
-        // when
         Triangle triangle = new Triangle(base, height, sideA, sideC);
+        // when
         double area = triangle.getArea();
         // then
         Assertions.assertEquals(8, area);
@@ -28,8 +28,8 @@ class TriangleTest {
         double height = 4;
         double sideA = 3;
         double sideC = 5;
-        // when
         Triangle triangle = new Triangle(base, height, sideA, sideC);
+        // when
         double perimeter = triangle.getPerimeter();
         // then
         Assertions.assertEquals(12, perimeter);
