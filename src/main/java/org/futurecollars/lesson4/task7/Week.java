@@ -2,7 +2,7 @@ package org.futurecollars.lesson4.task7;
 
 public class Week {
     public enum DayOfTheWeek {
-        Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+        MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
     }
 
     public static String returnDayOfTheWeek (DayOfTheWeek dayOfTheWeek) {
