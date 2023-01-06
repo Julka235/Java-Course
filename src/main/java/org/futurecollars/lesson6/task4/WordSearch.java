@@ -6,7 +6,7 @@ import java.nio.file.Path;
 
 public class WordSearch {
     public static void main(String[] args) {
-        String pathToFile = "C:\\Users\\julia\\Desktop\\data.txt";
+        String pathToFile = "C:\\Users\\MyName\\data.txt";
         System.out.println(doesContainSearchedWord(pathToFile, "Java"));
         System.out.println(doesContainSearchedWord(pathToFile, "Coffee"));
     }
