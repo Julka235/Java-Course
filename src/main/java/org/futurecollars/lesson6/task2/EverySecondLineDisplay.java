@@ -1,10 +1,10 @@
-package org.futurecollars.lesson6.task1;
+package org.futurecollars.lesson6.task2;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class PrintEverySecondLine {
+public class EverySecondLineDisplay {
     public static void main(String[] args) {
         printEverySecondLine("C:\\Users\\MyName\\data.txt");
     }
