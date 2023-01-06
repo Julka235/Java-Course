@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class SearchForWord {
+public class WordSearch {
     public static void main(String[] args) {
         String pathToFile = "C:\\Users\\julia\\Desktop\\data.txt";
         System.out.println(doesContainSearchedWord(pathToFile, "Java"));
