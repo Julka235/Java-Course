@@ -13,7 +13,7 @@ public class EverySecondLineDisplay {
         try {
             String fileContent = Files.readString(Path.of(pathToFile));
             String[] lines = fileContent.split("\n");
-            for(int i=0; i < lines.length; i+=2) {
+            for(int i = 0; i < lines.length; i += 2) {
                 System.out.println(lines[i]);
             }
         } catch (IOException e) {
