@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
-public class PrintFile {
+public class FileDisplay {
     public static void main(String[] args) {
         printFile("C:\\Users\\MyName\\data.txt");
     }
