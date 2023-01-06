@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class CreateAndWriteToFile {
+public class FileCreation {
     public static void main(String[] args) {
         String pathToFile = "C:\\Users\\MyName\\data.txt";
         createFile(pathToFile);
@@ -34,8 +34,6 @@ public class CreateAndWriteToFile {
             Files.writeString(Paths.get(pathToFile), text);
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } finally {
-            System.out.println("I wrote text to file.");
         }
     }
 }
