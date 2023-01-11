@@ -13,14 +13,14 @@ public class UpperCaseFormatter {
         writeUpperCaseToFile(pathToOriginalFile, pathToOutputFile);
     }
 
-    public static void writeUpperCaseToFile(String pathToOriginalFile, String pathToOutputFile)
+    private static void writeUpperCaseToFile(String pathToOriginalFile, String pathToOutputFile)
     {
         String text = getUpperCase(pathToOriginalFile);
         createFile(pathToOutputFile);
         writeToFile(pathToOutputFile, text);
     }
 
-    public static String getUpperCase(String pathToFile) {
+    private static String getUpperCase(String pathToFile) {
         try {
             String fileContent = Files.readString(Path.of(pathToFile));
             return fileContent.toUpperCase();
@@ -29,7 +29,7 @@ public class UpperCaseFormatter {
         }
     }
 
-    public static void createFile(String pathToFile) {
+    private static void createFile(String pathToFile) {
         File file = new File(pathToFile);
         try {
             if (file.createNewFile()) {
