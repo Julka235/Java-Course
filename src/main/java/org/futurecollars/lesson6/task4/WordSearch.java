@@ -6,12 +6,12 @@ import java.nio.file.Path;
 
 public class WordSearch {
     public static void main(String[] args) {
-        String pathToFile = "C:\\Users\\MyName\\data.txt";
+        String pathToFile = "data.txt";
         System.out.println(doesContainSearchedWord(pathToFile, "Java"));
         System.out.println(doesContainSearchedWord(pathToFile, "Coffee"));
     }
 
-    public static boolean doesContainSearchedWord(String pathToFile, String searchedWord) {
+    private static boolean doesContainSearchedWord(String pathToFile, String searchedWord) {
         try {
             String fileContent = Files.readString(Path.of(pathToFile));
             return fileContent.contains(searchedWord);
