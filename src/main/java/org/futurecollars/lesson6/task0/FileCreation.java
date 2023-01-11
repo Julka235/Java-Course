@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 
 public class FileCreation {
     public static void main(String[] args) {
-        String pathToFile = "C:\\Users\\MyName\\data.txt";
+        String pathToFile = "data.txt";
         createFile(pathToFile);
         writeToFile(pathToFile, "Kurs\n" +
                 "Java\n" +
@@ -18,7 +18,7 @@ public class FileCreation {
                 "Koniec pliku");
     }
 
-    public static void createFile(String pathToFile) {
+    private static void createFile(String pathToFile) {
         File file = new File(pathToFile);
         try {
             if (file.createNewFile()) {
@@ -29,7 +29,7 @@ public class FileCreation {
         }
     }
 
-    public static void writeToFile(String pathToFile, String text) {
+    private static void writeToFile(String pathToFile, String text) {
         try {
             Files.writeString(Paths.get(pathToFile), text);
         } catch (IOException e) {
