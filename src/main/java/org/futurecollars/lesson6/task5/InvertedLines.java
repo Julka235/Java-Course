@@ -6,11 +6,11 @@ import java.nio.file.Path;
 
 public class InvertedLines {
     public static void main(String[] args) {
-        String pathToFile = "C:\\Users\\MyName\\data.txt";
+        String pathToFile = "data.txt";
         invertLines(pathToFile);
     }
 
-    public static void invertLines(String pathToFile) {
+    private static void invertLines(String pathToFile) {
         try {
             String fileContent = Files.readString(Path.of(pathToFile));
             String[] lines = fileContent.split("\n");
