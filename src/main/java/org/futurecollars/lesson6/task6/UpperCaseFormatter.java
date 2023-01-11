@@ -8,10 +8,16 @@ import java.nio.file.Paths;
 
 public class UpperCaseFormatter {
     public static void main(String[] args) {
-        String pathToFile = "C:\\Users\\MyName\\output.txt";
-        String text = getUpperCase("C:\\Users\\MyName\\data.txt");
-        createFile(pathToFile);
-        writeToFile(pathToFile, text);
+        String pathToOriginalFile = "data.txt";
+        String pathToOutputFile = "output.txt";
+        writeUpperCaseToFile(pathToOriginalFile, pathToOutputFile);
+    }
+
+    public static void writeUpperCaseToFile(String pathToOriginalFile, String pathToOutputFile)
+    {
+        String text = getUpperCase(pathToOriginalFile);
+        createFile(pathToOutputFile);
+        writeToFile(pathToOutputFile, text);
     }
 
     public static String getUpperCase(String pathToFile) {
