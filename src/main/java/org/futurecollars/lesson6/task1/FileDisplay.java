@@ -6,7 +6,7 @@ import java.nio.file.Path;
 
 public class FileDisplay {
     public static void main(String[] args) {
-        String pathToFile = "data.txt"
+        String pathToFile = "data.txt";
         printFile(pathToFile);
     }
 
