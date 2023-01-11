@@ -6,10 +6,11 @@ import java.nio.file.Path;
 
 public class AmountOfCharacters {
     public static void main(String[] args) {
-        System.out.println(getAmountOfCharacters("C:\\Users\\MyName\\data.txt"));
+        String pathToFile = "data.txt";
+        System.out.println(getAmountOfCharacters(pathToFile));
     }
 
-    public static int getAmountOfCharacters(String pathToFile) {
+    private static int getAmountOfCharacters(String pathToFile) {
         try {
             String fileContent = Files.readString(Path.of(pathToFile));
             return fileContent.length();
