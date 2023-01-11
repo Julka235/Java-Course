@@ -6,10 +6,11 @@ import java.nio.file.Path;
 
 public class EverySecondLineDisplay {
     public static void main(String[] args) {
-        printEverySecondLine("C:\\Users\\MyName\\data.txt");
+        String pathToFile = "data.txt";
+        printEverySecondLine(pathToFile);
     }
 
-    public static void printEverySecondLine(String pathToFile) {
+    private static void printEverySecondLine(String pathToFile) {
         try {
             String fileContent = Files.readString(Path.of(pathToFile));
             String[] lines = fileContent.split("\n");
