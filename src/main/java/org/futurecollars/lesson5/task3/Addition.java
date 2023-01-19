@@ -2,7 +2,7 @@ package org.futurecollars.lesson5.task3;
 
 public class Addition implements Operation {
     @Override
-    public int getResultOfTheOperation(int firstValue, int secondValue) {
+    public int compute(int firstValue, int secondValue) {
         return firstValue + secondValue;
     }
 }
