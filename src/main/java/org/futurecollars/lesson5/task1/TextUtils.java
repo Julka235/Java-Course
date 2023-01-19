@@ -1,6 +1,6 @@
 package org.futurecollars.lesson5.task1;
 
-public class Text {
+public class TextUtils {
     public static boolean isPalindrome(String text) {
         if(text == null || text.equals("")) return false;
         String cleanText = text.replaceAll("\\s+", "").toLowerCase();
@@ -16,7 +16,8 @@ public class Text {
     }
 
     public static int getTextLength(String text) {
-        if(text == null || text.equals("")) return -1;
+        if(text == null) return -1;
+        if(text.equals("")) return 0;
         return text.length();
     }
 }

@@ -3,18 +3,16 @@ package org.futurecollars.lesson5.task1;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class TextTest {
+class TextUtilsTest {
 
     @Test
     void shouldReturnTrueIfPalindrome() {
         // given
         String text = "Kay ak";
         // when
-        boolean palindrome = Text.isPalindrome(text);
+        boolean isPalindrome = TextUtils.isPalindrome(text);
         // then
-        Assertions.assertTrue(palindrome);
+        Assertions.assertTrue(isPalindrome);
     }
 
     @Test
@@ -22,9 +20,9 @@ class TextTest {
         // given
         String text = "cat with a hat";
         // when
-        boolean palindrome = Text.isPalindrome(text);
+        boolean isPalindrome = TextUtils.isPalindrome(text);
         // then
-        Assertions.assertFalse(palindrome);
+        Assertions.assertFalse(isPalindrome);
     }
 
     @Test
@@ -32,7 +30,7 @@ class TextTest {
         // given
         String text = "Ebenezer Scrooge";
         // when
-        int textLength = Text.getTextLength(text);
+        int textLength = TextUtils.getTextLength(text);
         // then
         Assertions.assertEquals(16, textLength);
     }
