@@ -10,7 +10,7 @@ class TextFormatterTest {
     @ParameterizedTest
     @ValueSource(strings = {"cat", "King", "NASA", "isTRUE"})
     @EmptySource
-    void shouldReturnTextInUpperCaseOrEmptyForEmpty(String input) {
+    void shouldReturnTextInUpperCase(String input) {
         String expectedText = input.toUpperCase();
         Assertions.assertEquals(expectedText, TextFormatter.getTextInUpperCase(input));
     }
