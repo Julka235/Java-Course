@@ -5,4 +5,9 @@ public class Division implements Operation{
     public int compute(int firstValue, int secondValue) {
         return firstValue / secondValue;
     }
+
+    @Override
+    public char getSign() {
+        return '/';
+    }
 }
