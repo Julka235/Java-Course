@@ -9,26 +9,26 @@ public class Training {
         else return "Perfect";
     }
 
-    public static double getEffectivity(double duration, double calories, double pulse) {
+    private static double getEffectivity(double duration, double calories, double pulse) {
         double durationEffectivity = getDurationEffectivity(duration);
         double burnedCaloriesEffectivity = getCaloriesEffectivity(calories);
         double averagePulseEffectivity = getPulseEffectivity(pulse);
         return (durationEffectivity + burnedCaloriesEffectivity * 2 + averagePulseEffectivity * 3) / 6;
     }
 
-    public static int getDurationEffectivity(double duration) {
+    private static int getDurationEffectivity(double duration) {
         if(duration < 30) return 1;
         else if(duration <= 60) return 2;
         else return 3;
     }
 
-    public static int getCaloriesEffectivity(double calories) {
+    private static int getCaloriesEffectivity(double calories) {
         if(calories <= 300) return 1;
         else if(calories < 400) return 2;
         else return 3;
     }
 
-    public static int getPulseEffectivity(double pulse) {
+    private static int getPulseEffectivity(double pulse) {
         if(pulse < 160) return 1;
         else if(pulse <= 175) return 2;
         else return 3;
