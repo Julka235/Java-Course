@@ -9,45 +9,37 @@ public class NamesListFormatter {
         displayInReverseOrder(names);
         changeElement(names, "Anna", "Joanna");
     }
+
     public static void displayUniqueNames(List<String> names) {
-        List<String> sortedNames = new ArrayList<>();
-        for (String name : names) {
-            sortedNames.add(name);
-        }
-        Collections.sort(sortedNames);
+        Set<String> uniqueNames = new LinkedHashSet<>(names);
 
-        List<String> uniqueNames = new ArrayList<>();
-
-        uniqueNames.add(sortedNames.get(0));
-        for(int i = 1; i < sortedNames.size(); i++) {
-            if(!sortedNames.get(i).equals(sortedNames.get(i - 1))) {
-                uniqueNames.add(sortedNames.get(i));
-            }
+        System.out.print("Lista bez duplikatów: ");
+        Iterator<String> iterator = uniqueNames.iterator();
+        for (int i=0; i< uniqueNames.size() - 1; i++) {
+            System.out.print(iterator.next() + ", ");
         }
-        System.out.println("Lista bez duplikatów: " + uniqueNames);
+        System.out.println(iterator.next());
     }
 
     public static void displayInReverseOrder(List<String> names) {
-        List<String> namesInReverseOrder = new ArrayList<>();
-        for(int i = names.size() - 1; i >= 0; i--) {
-            namesInReverseOrder.add(names.get(i));
+        System.out.println("Elementy w odwrotnej kolejności: ");
+        for (int i = names.size() - 1; i > 0; i--) {
+            System.out.print(names.get(i) + ", ");
         }
-
-        for(int i = 0; i < namesInReverseOrder.size(); i++) {
-            names.set(i, namesInReverseOrder.get(i));
-        }
-
-        System.out.println("Elementy w odwrotnej kolejności: " + names);
+        System.out.println(names.get(0));
     }
 
     public static void changeElement(List<String> names, String nameToBeChanged, String newName) {
-        for(int i = 0; i < names.size(); i++) {
-            if(Objects.equals(names.get(i), nameToBeChanged)) {
+        for (int i = 0; i < names.size(); i++) {
+            if (Objects.equals(names.get(i), nameToBeChanged)) {
                 names.set(i, newName);
             }
         }
 
-        System.out.println("Elementy po zmianie : " + nameToBeChanged + " -> " + newName);
-        System.out.println(names);
+        System.out.println("Elementy po zmianie: " + nameToBeChanged + " -> " + newName);
+        for (int i = 0; i < names.size() - 1; i++) {
+            System.out.print(names.get(i) + ", ");
+        }
+        System.out.println(names.get(names.size() - 1));
     }
 }
