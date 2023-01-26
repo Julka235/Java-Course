@@ -1,8 +1,8 @@
 package org.futurecollars.lesson7.task8;
 
 public class SalaryCalculator {
-    BasicSalaryProvider basicSalaryProvider;
-    WorkedSaturdayPayProvider workedSaturdayPayProvider;
+    private final BasicSalaryProvider basicSalaryProvider;
+    private final WorkedSaturdayPayProvider workedSaturdayPayProvider;
 
     public SalaryCalculator(BasicSalaryProvider basicSalaryProvider, WorkedSaturdayPayProvider workedSaturdayPayProvider) {
         this.basicSalaryProvider = basicSalaryProvider;
