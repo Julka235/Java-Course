@@ -1,8 +1,8 @@
 package org.futurecollars.lesson8.task3;
 
 public class DoublyLinkedList {
-    Node head;
-    int listSize = 0;
+    private Node head;
+    private int listSize = 0;
 
     static class Node {
         int value;
