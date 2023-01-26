@@ -2,10 +2,10 @@ package org.futurecollars.lesson9.task5;
 
 public class GenericBubbleSort<T extends Comparable<? super T>> {
     public void bubbleSort(T[] array) {
-        int n = array.length;
-        while (n > 0) {
+        int arrayLength = array.length;
+        while (arrayLength > 0) {
             int lastModifiedIndex = 0;
-            for (int i = 1; i < n; i++) {
+            for (int i = 1; i < arrayLength; i++) {
                 if (array[i - 1].compareTo(array[i]) > 0) {
                     T temporary = array[i - 1];
                     array[i - 1] = array[i];
@@ -13,7 +13,7 @@ public class GenericBubbleSort<T extends Comparable<? super T>> {
                     lastModifiedIndex = i;
                 }
             }
-            n = lastModifiedIndex;
+            arrayLength = lastModifiedIndex;
         }
     }
 }
