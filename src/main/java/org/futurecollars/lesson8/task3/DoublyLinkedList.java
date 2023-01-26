@@ -4,7 +4,7 @@ public class DoublyLinkedList {
     private Node head;
     private int listSize = 0;
 
-    static class Node {
+    private static class Node {
         int value;
         int index;
         Node previous;
