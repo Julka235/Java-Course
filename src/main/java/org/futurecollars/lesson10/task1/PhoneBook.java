@@ -15,7 +15,7 @@ public class PhoneBook {
 
     public PhoneBook() {
         this.persons = new HashMap<>();
-        String pathToFile = "C:\\Users\\julia\\Desktop\\data.txt";
+        String pathToFile = "data.txt";
         try {
             String fileContent = Files.readString(Path.of(pathToFile));
             String[] personsData = fileContent.split("\n");
@@ -36,7 +36,7 @@ public class PhoneBook {
     }
 
     private void writeToFile(Person person) {
-        String pathToFile = "C:\\Users\\julia\\Desktop\\data.txt";
+        String pathToFile = "data.txt";
         String text = person.getName() + ';' + person.getAddress();
         if (person.getPhoneNumber() != null) text += ';' + person.getPhoneNumber();
         text += '\n';
