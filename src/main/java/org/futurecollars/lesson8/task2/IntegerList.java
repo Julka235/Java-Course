@@ -1,6 +1,7 @@
 package org.futurecollars.lesson8.task2;
 
 public class IntegerList implements OwnList {
+    private static final int VALUE_BY_WHICH_WE_INCREASE_LIST_SIZE = 10;
     private Integer[] integerList;
     private int listSize;
 
@@ -26,8 +27,8 @@ public class IntegerList implements OwnList {
 
     @Override
     public void add(Integer element) {
-        if (listSize % 10 == 0) {
-            Integer[] newIntegerList = new Integer[listSize + 10];
+        if (listSize % VALUE_BY_WHICH_WE_INCREASE_LIST_SIZE == 0) {
+            Integer[] newIntegerList = new Integer[listSize + VALUE_BY_WHICH_WE_INCREASE_LIST_SIZE];
             for (int i = 0; i < listSize; i++) {
                 newIntegerList[i] = integerList[i];
             }
@@ -43,8 +44,8 @@ public class IntegerList implements OwnList {
             throw new ArrayIndexOutOfBoundsException("Such an index does not exist.");
         }
 
-        if (listSize % 10 == 0) {
-            Integer[] newIntegerList = new Integer[listSize + 10];
+        if (listSize % VALUE_BY_WHICH_WE_INCREASE_LIST_SIZE == 0) {
+            Integer[] newIntegerList = new Integer[listSize + VALUE_BY_WHICH_WE_INCREASE_LIST_SIZE];
             for (int i = 0; i < listSize; i++) {
                 newIntegerList[i] = integerList[i];
             }
@@ -65,8 +66,8 @@ public class IntegerList implements OwnList {
         }
 
         if (integerList.length > listSize * 2) {
-            int newListLength = integerList.length / 2 + 10;
-            newListLength = newListLength - (newListLength % 10);
+            int newListLength = integerList.length / 2 + VALUE_BY_WHICH_WE_INCREASE_LIST_SIZE;
+            newListLength = newListLength - (newListLength % VALUE_BY_WHICH_WE_INCREASE_LIST_SIZE);
             Integer[] newIntegerList = new Integer[newListLength];
             for (int i = 0; i < listSize; i++) {
                 newIntegerList[i] = integerList[i];
