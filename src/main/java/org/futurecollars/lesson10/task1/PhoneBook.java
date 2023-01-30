@@ -11,19 +11,29 @@ import java.util.Map;
 
 public class PhoneBook {
 
+    private static final int AMOUNT_OF_PERSONAL_ELEMENTS_WITHOUT_PHONE_NUMBER = 2;
+    private static final int AMOUNT_OF_PERSONAL_ELEMENTS_WITH_PHONE_NUMBER = 3;
     private final Map<String, Person> persons;
+    private final String pathToFile;
 
-    public PhoneBook() {
+    public PhoneBook(String pathToFile) {
         this.persons = new HashMap<>();
-        String pathToFile = "data.txt";
+        this.pathToFile = pathToFile;
+        readFile();
+    }
+
+    private void readFile() {
         try {
             String fileContent = Files.readString(Path.of(pathToFile));
             String[] personsData = fileContent.split("\n");
             for (String personsDatum : personsData) {
                 String[] personData = personsDatum.split(";");
-                if (personData.length == 2) persons.put(personData[0], new Person(personData[0], personData[1]));
-                else if (personData.length == 3)
+                if (personData.length == AMOUNT_OF_PERSONAL_ELEMENTS_WITHOUT_PHONE_NUMBER) {
+                    persons.put(personData[0], new Person(personData[0], personData[1]));
+                }
+                else if (personData.length == AMOUNT_OF_PERSONAL_ELEMENTS_WITH_PHONE_NUMBER) {
                     persons.put(personData[0], new Person(personData[0], personData[1], personData[2]));
+                }
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -36,17 +46,25 @@ public class PhoneBook {
     }
 
     private void writeToFile(Person person) {
-        String pathToFile = "data.txt";
         String text = person.getName() + ';' + person.getAddress();
-        if (person.getPhoneNumber() != null) text += ';' + person.getPhoneNumber();
+        if (person.getPhoneNumber() != null) {
+            text += ';' + person.getPhoneNumber();
+        }
         text += '\n';
+
+        BufferedWriter bw = null;
         try {
             FileWriter fw = new FileWriter(new File(pathToFile), true);
-            BufferedWriter bw = new BufferedWriter(fw);
+            bw = new BufferedWriter(fw);
             bw.write(text);
-            bw.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
+        } finally {
+            try {
+                bw.close();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
